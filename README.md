@@ -74,7 +74,6 @@ Writes custom data into **bits 4-7**, replacing the health value.
 ### 3. `CreateStencilValueFreeBit`
 Writes custom data into **bit 3**, the free bit not read by the Tek Helmet. - I'm not sure if it's used elsewhere but for the Tek Helmet it seems to be unused.
 
-- Formula: `(CategoryBits | HealthBits) | 8 or 0`
 - Side effect: **none known**
 - Limitation: binary only (on/off)
 
