@@ -89,7 +89,8 @@ Note that `SceneTexture:CustomDepth` and `SceneTexture:CustomStencil` must be co
 
 For example, this is the function for health bits.
 
-```{
+```hlsl
+{
 float2 UV = GetDefaultSceneTextureUV(Parameters, PPI_CustomDepth);
 int TrueValue = (int)(StencilValue * 255.9999f);
 int StateBits = (TrueValue >> 4) & 0x0F;
@@ -98,7 +99,7 @@ if(StateBits == 13) return 5.0f;
 if(StateBits == 14) return 6.0f;
 
 return 0.0f;
-}```
+}
+```
 
-
-```if(StateBits == 13) return 5.0f;``` -> this checks for whatever value you passed in, in the buff and outputs 5.0/6.0. This value is then used by the if node to decide the colour of the overlay. 5.0 and 6.0 can be any number you want, add more if statements if you want more options.
+`if(StateBits == 13) return 5.0f;` -> this checks for whatever value you passed in, in the buff and outputs 5.0/6.0. This value is then used by the if node to decide the colour of the overlay. 5.0 and 6.0 can be any number you want, add more if statements if you want more options.
