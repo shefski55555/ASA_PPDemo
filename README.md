@@ -8,6 +8,8 @@ Important: in the devkit, r.customdepth seems to be set to 1 by default. Use the
 
 If you need a more general starting point on PP buffs I started this off of Quellcrest's example [here](https://discord.com/channels/153690873186484224/623923912308424714/1175917589495558205)
 
+You can manually give yourself the buff from this demo using this command ```cheat ForceGiveBuff "Buff_dinooverlay" true``` and then just spawn any dino.
+
 ---
 
 ## The Problem
