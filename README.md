@@ -102,4 +102,4 @@ return 0.0f;
 }
 ```
 
-`if(StateBits == 13) return 5.0f;` -> this checks for whatever value you passed in, in the buff and outputs 5.0/6.0. This value is then used by the if node to decide the colour of the overlay. 5.0 and 6.0 can be any number you want, add more if statements if you want more options.
+`if(StateBits == 13) return 5.0f;` -> this checks for whatever value you passed into the stencil from the function in the buff and outputs 5.0/6.0. This value is then used by the if node to decide the colour of the overlay. 5.0 and 6.0 can be any number you want, add more if statements if you want more options.
