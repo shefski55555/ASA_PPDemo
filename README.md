@@ -6,7 +6,7 @@ This repository demonstrates how to write custom data to the CustomStencil buffe
 
 Important: in the devkit, r.customdepth seems to be set to 1 by default. Use the command r.customdepth 3 to set it to the needed value. (This is done automatically in live from amy testing)
 
-If you need a more general starting point on PP buffs I started this off of Quellcrest's example here https://discord.com/channels/153690873186484224/623923912308424714/1175917589495558205
+If you need a more general starting point on PP buffs I started this off of Quellcrest's example [here](https://discord.com/channels/153690873186484224/623923912308424714/1175917589495558205)
 ---
 
 ## The Problem
@@ -88,7 +88,7 @@ Note that `SceneTexture:CustomDepth` and `SceneTexture:CustomStencil` must be co
 
 For example, this is the function for health bits.
 
-`{
+```{
 float2 UV = GetDefaultSceneTextureUV(Parameters, PPI_CustomDepth);
 int TrueValue = (int)(StencilValue * 255.9999f);
 int StateBits = (TrueValue >> 4) & 0x0F;
@@ -97,7 +97,7 @@ if(StateBits == 13) return 5.0f;
 if(StateBits == 14) return 6.0f;
 
 return 0.0f;
-}`
+}```
 
 
-if(StateBits == 13) return 5.0f; -> this checks for whatever value you passed in, in the buff and outputs 5.0/6.0. This value is then used by the if node to decide the colour of the overlay. 5.0 and 6.0 can be any number you want, add more if statements if you want more options.
+```if(StateBits == 13) return 5.0f;``` -> this checks for whatever value you passed in, in the buff and outputs 5.0/6.0. This value is then used by the if node to decide the colour of the overlay. 5.0 and 6.0 can be any number you want, add more if statements if you want more options.
